@@ -16,7 +16,7 @@ public class DogsController {
 
 	public DogsController() {
 		System.out.println("DogsController called");
-		System.out.println("some changess");
+		System.out.println("some changes");
 	}
 
 	private DogsService service;
