@@ -16,18 +16,21 @@ public class DogsController {
 
 	public DogsController() {
 		System.out.println("DogsController called");
+		System.out.println("some changes");
 	}
 
 	private DogsService service;
+	
+	@Autowired
+	public void setService(DogsService service) {
+		System.out.println("DogsController setter called");
+		this.service = service;
+	}
 
 	@GetMapping
 	public List<Dog> getDogs() {
 		return service.getDogs();
 	}
 
-	@Autowired
-	public void setService(DogsService service) {
-		System.out.println("DogsController setter called");
-		this.service = service;
-	}
+
 }
